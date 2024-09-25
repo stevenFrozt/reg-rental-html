@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+	</head>
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.css"
+	/>
+	<link rel="stylesheet" href="carousel.css" />
+	<body>
+		<!-- Slider main container -->
+		<div class="swiper">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">
+					<div class="reviews-card">
+						<div class="reviews-card--comment">
+							<div
+								class="reviews-rating--container"
+							>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<p>
+								"Lorem ipsum dolor sit amet
+								consectetur adipisicing elit.
+								Fuga, ab eligendi mollitia
+								beatae odio consequatur
+								cupiditate quam assumenda nisi
+								itaque."
+							</p>
+						</div>
+						<div class="review-user">
+							<img
+								src="https://github.com/shadcn.png"
+								alt=""
+							/>
+							<h5>Ruby King</h5>
+							<p>International Economist</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">Slide 2</div>
+				<div class="swiper-slide">Slide 3</div>
+				<div class="swiper-slide">Slide 3</div>
+				<div class="swiper-slide">Slide 3</div>
+				<div class="swiper-slide">Slide 3</div>
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev">
+				<i class="fa-arrow-left fa-solid"></i>
+			</div>
+			<div class="swiper-button-next"></div>
+
+			<script type="module" src="test.js"></script>
+		</div>
+	</body>
+</html>

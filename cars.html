@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="/css/car_page.css" />
+		<link rel="stylesheet" href="/css/product.css" />
+		<link rel="stylesheet" href="/css/nav.css" />
+		<link rel="stylesheet" href="/css/base.css" />
+		<link rel="stylesheet" href="/css/inputs.css" />
+		<link rel="stylesheet" href="/css/footer.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Cars</title>
+	</head>
+	<body>
+		<!-- Nav -->
+		<nav>
+			<a href="#" class="nav--logo">Logo</a>
+			<div class="nav-links">
+				<a href="/index1.html">Home</a>
+				<a href="#" class="nav--active">Cars</a>
+				<a href="#">About Us</a>
+				<a href="#">Contact Us</a>
+				<div class="nav--number-container">
+					<i class="fa-phone fa-solid"></i>
+					<h5>+63 914 9645 234</h5>
+				</div>
+				<div class="nav--avatar-container">
+					<div class="nav--avatar">
+						<img
+							src="https://github.com/shadcn.png"
+							loading="lazy"
+							alt=""
+						/>
+					</div>
+					<div class="hidden dropdownMenu">
+						<a href="#">Account Settings</a>
+						<a href="#">My Bookings</a>
+						<a href="#">Sign Out</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav--burger">
+				<i class="fa-bars fa-solid"></i>
+			</div>
+		</nav>
+		<!-- Nav Modal -->
+		<div class="nav--modal">
+			<div class="nav--modal-close">
+				<i id="nav-close" class="fa-solid fa-xmark"></i>
+			</div>
+			<div class="nav--modal-container">
+				<a href="/index1.html">Home</a>
+				<a href="" class="nav--active">Cars</a>
+				<a href="">About Us</a>
+				<a href="">Contact Us</a>
+				<div class="nav--number-container">
+					<i class="fa-phone fa-solid"></i>
+					<h5>+63 914 9645 234</h5>
+				</div>
+			</div>
+		</div>
+
+		<!-- MAIN -->
+		<main>
+			<div class="container">
+				<!-- Filter CONTAINER -->
+				<div class="filter-container">
+					<form action="">
+						<div class="filter-card">
+							<h6 class="filter-title">Brands</h6>
+							<ul>
+								<li>
+									<input
+										type="radio"
+										id="all"
+										name="brand"
+										checked
+									/>
+									<label for="all">
+										<div
+											class="radio-btn"
+										></div>
+										All
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="toyota"
+										name="brand"
+									/>
+									<label for="toyota">
+										<div
+											class="radio-btn"
+										></div>
+										Toyota
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="ford"
+										name="brand"
+									/>
+									<label for="ford">
+										<div
+											class="radio-btn"
+										></div>
+										Ford
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="mitsubishi"
+										name="brand"
+									/>
+									<label for="mitsubishi">
+										<div
+											class="radio-btn"
+										></div>
+										Mitsubishi
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="honda"
+										name="brand"
+									/>
+									<label for="honda">
+										<div
+											class="radio-btn"
+										></div>
+										Honda
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="hyundai"
+										name="brand"
+									/>
+									<label for="hyundai">
+										<div
+											class="radio-btn"
+										></div>
+										Hyundai
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="filter-card">
+							<h6 class="filter-title">Sorts</h6>
+							<ul>
+								<li>
+									<input
+										type="radio"
+										id="sorts-relevance"
+										name="sorts"
+										checked
+									/>
+									<label
+										for="sorts-relevance"
+									>
+										<div
+											class="radio-btn"
+										></div>
+										relevance
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="sorts-best"
+										name="sorts"
+									/>
+									<label for="sorts-best">
+										<div
+											class="radio-btn"
+										></div>
+										best selling
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="sorts-most-favorite"
+										name="sorts"
+									/>
+									<label
+										for="sorts-most-favorite"
+									>
+										<div
+											class="radio-btn"
+										></div>
+										most favorite
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="sorts-recently"
+										name="sorts"
+									/>
+									<label
+										for="sorts-recently"
+									>
+										<div
+											class="radio-btn"
+										></div>
+										recently Added
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="sorts-high"
+										name="sorts"
+									/>
+									<label for="sorts-high">
+										<div
+											class="radio-btn"
+										></div>
+										Price (High to Low)
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="sorts-low"
+										name="sorts"
+									/>
+									<label for="sorts-low">
+										<div
+											class="radio-btn"
+										></div>
+										Price (Low to high)
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="filter-card">
+							<h6 class="filter-title">
+								Transmission
+							</h6>
+							<ul>
+								<li>
+									<input
+										type="radio"
+										id="Any-transimission"
+										name="transmission"
+										checked
+									/>
+									<label
+										for="Any-transimission"
+									>
+										<div
+											class="radio-btn"
+										></div>
+										Any
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="Manual"
+										name="transmission"
+									/>
+									<label for="Manual">
+										<div
+											class="radio-btn"
+										></div>
+										Manual
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="Automatic"
+										name="transmission"
+									/>
+									<label for="Automatic">
+										<div
+											class="radio-btn"
+										></div>
+										Automatic
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="filter-card">
+							<h6 class="filter-title">Seats</h6>
+							<ul>
+								<li>
+									<input
+										type="radio"
+										id="Any-seats"
+										name="seats"
+										checked
+									/>
+									<label for="Any-seats">
+										<div
+											class="radio-btn"
+										></div>
+										Any
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="4 Seats"
+										name="seats"
+									/>
+									<label for="4 Seats">
+										<div
+											class="radio-btn"
+										></div>
+										4 Seats
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="5 Seats"
+										name="seats"
+									/>
+									<label for="5 Seats">
+										<div
+											class="radio-btn"
+										></div>
+										5 Seats
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="8 Seats"
+										name="seats"
+									/>
+									<label for="8 Seats">
+										<div
+											class="radio-btn"
+										></div>
+										8 Seats
+									</label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										id="12 Seats"
+										name="seats"
+									/>
+									<label for="12 Seats">
+										<div
+											class="radio-btn"
+										></div>
+										12 Seats
+									</label>
+								</li>
+							</ul>
+						</div>
+						<button class="bg-primary filter-apply-btn">
+							Apply Filter
+						</button>
+					</form>
+				</div>
+				<!-- CARS CONTAINER -->
+				<div class="main-container">
+					<!-- SEARCH CONTAINER -->
+					<div class="search-container">
+						<h6>All Brands</h6>
+						<div class="search-filter-container">
+							<input
+								type="text"
+								name=""
+								id=""
+								placeholder="Search..."
+							/>
+							<button class="filter-btn">
+								<i
+									class="fa-filter fa-solid"
+								></i>
+							</button>
+						</div>
+					</div>
+					<!-- CARS -->
+					<div class="cars-container">
+						<div class="product--card">
+							<div class="product--card-image">
+								<img
+									src="https://images.pexels.com/photos/19975102/pexels-photo-19975102/free-photo-of-red-vintage-gmc-jimmy-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+									alt=""
+								/>
+							</div>
+							<div
+								class="product--card-content-container"
+							>
+								<div
+									class="product--card-content"
+								>
+									<h5
+										class="product--card-title"
+									>
+										Toyota Land Cruiser
+										Prado
+									</h5>
+									<div
+										class="product--card-rating-container"
+									>
+										<div
+											class="product--card-stars"
+										>
+											<i
+												class="fa-solid fa-star"
+											></i>
+											<i
+												class="fa-solid fa-star"
+											></i>
+											<i
+												class="fa-solid fa-star"
+											></i>
+											<i
+												class="fa-solid fa-star"
+											></i>
+											<i
+												class="fa-solid fa-star"
+											></i>
+										</div>
+										<p>412.5k</p>
+									</div>
+
+									<div
+										class="product--card-details"
+									>
+										<div>
+											<h6>
+												4 Seats
+											</h6>
+											<h6>
+												Automatic
+											</h6>
+										</div>
+										<div
+											class="product--card-details-price"
+										>
+											<h5>
+												₱360.00
+											</h5>
+											<p>per day</p>
+										</div>
+									</div>
+									<!-- BUTTON -->
+									<button
+										class="bg-primary product--card-button"
+									>
+										Book Now
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product--card">
+							<div class="product--card-image">
+								<img
+									src="https://images.pexels.com/photos/19975102/pexels-photo-19975102/free-photo-of-red-vintage-gmc-jimmy-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+									alt=""
+								/>
+							</div>
+							<div
+								class="product--card-content-container"
+							>
+								<div
+									class="product--card-content"
+								>
+									<h5
+										class="product--card-title"
+									>
+										Toyota Land Cruiser
+										Prado
+									</h5>
+									<div
+										class="product--card-stars"
+									>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+									</div>
+									<div
+										class="product--card-details"
+									>
+										<div>
+											<h6>
+												4 Seats
+											</h6>
+											<h6>
+												Automatic
+											</h6>
+										</div>
+										<div
+											class="product--card-details-price"
+										>
+											<h5>
+												₱360.00
+											</h5>
+											<p>per day</p>
+										</div>
+									</div>
+									<!-- BUTTON -->
+									<button
+										class="bg-primary product--card-button"
+									>
+										Book Now
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product--card">
+							<div class="product--card-image">
+								<img
+									src="https://images.pexels.com/photos/19975102/pexels-photo-19975102/free-photo-of-red-vintage-gmc-jimmy-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+									alt=""
+								/>
+							</div>
+							<div
+								class="product--card-content-container"
+							>
+								<div
+									class="product--card-content"
+								>
+									<h5
+										class="product--card-title"
+									>
+										Toyota Land Cruiser
+										Prado
+									</h5>
+									<div
+										class="product--card-stars"
+									>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+									</div>
+									<div
+										class="product--card-details"
+									>
+										<div>
+											<h6>
+												4 Seats
+											</h6>
+											<h6>
+												Automatic
+											</h6>
+										</div>
+										<div
+											class="product--card-details-price"
+										>
+											<h5>
+												₱360.00
+											</h5>
+											<p>per day</p>
+										</div>
+									</div>
+									<!-- BUTTON -->
+									<button
+										class="bg-primary product--card-button"
+									>
+										Book Now
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product--card">
+							<div class="product--card-image">
+								<img
+									src="https://images.pexels.com/photos/19975102/pexels-photo-19975102/free-photo-of-red-vintage-gmc-jimmy-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+									alt=""
+								/>
+							</div>
+							<div
+								class="product--card-content-container"
+							>
+								<div
+									class="product--card-content"
+								>
+									<h5
+										class="product--card-title"
+									>
+										Toyota Land Cruiser
+										Prado
+									</h5>
+									<div
+										class="product--card-stars"
+									>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+										<i
+											class="fa-solid fa-star"
+										></i>
+									</div>
+									<div
+										class="product--card-details"
+									>
+										<div>
+											<h6>
+												4 Seats
+											</h6>
+											<h6>
+												Automatic
+											</h6>
+										</div>
+										<div
+											class="product--card-details-price"
+										>
+											<h5>
+												₱360.00
+											</h5>
+											<p>per day</p>
+										</div>
+									</div>
+									<!-- BUTTON -->
+									<button
+										class="bg-primary product--card-button"
+									>
+										Book Now
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="bg-primary">
+			<div class="footer-container">
+				<div class="footer--details">
+					<h3>Logo</h3>
+					<p>
+						Discover the convenience and flexibility of
+						traveling with us, Palawan Best Car Rental,
+						your go-to car rental partner.
+					</p>
+					<div class="footer--socials-container">
+						<a href="">
+							<i
+								class="fa-brands fa-facebook-f"
+							></i>
+							Facebook
+						</a>
+						<a href=""
+							><i
+								class="fa-brands fa-instagram"
+							></i>
+							instagram</a
+						>
+						<a href="">
+							<i class="fa-brands fa-x-twitter"></i>
+							twitter
+						</a>
+					</div>
+				</div>
+				<div class="footer--contact">
+					<h3 class="footer--sub-title">Get In Touch</h3>
+					<div>
+						<h6 class="footer--contact-item">
+							<i
+								class="fa-map-location-dot fa-solid"
+							></i
+							>17 H. Mendoza Puerto Princesa City
+						</h6>
+						<h6 class="footer--contact-item">
+							<i class="fa-envelope fa-solid"></i>
+							sample@gmail.com
+						</h6>
+						<h6 class="footer--contact-item">
+							<i class="fa-phone fa-solid"></i>
+							+63 917 134 9435
+						</h6>
+						<h6 class="footer--contact-item">
+							<i class="fa-clock fa-solid"></i>
+							08.00 AM - 06.00 PM
+						</h6>
+					</div>
+				</div>
+				<div class="footer--links">
+					<h3 class="footer--sub-title">Quick Links</h3>
+					<div>
+						<a href="/" class="footer--links-item"
+							>Home</a
+						>
+						<a href="/cars" class="footer--links-item"
+							>Cars</a
+						>
+						<a href="#" class="footer--links-item">
+							About Us
+						</a>
+						<a href="#" class="footer--links-item">
+							Contact Us
+						</a>
+					</div>
+				</div>
+				<div class="footer--location">
+					<h3 class="footer--sub-title">Location</h3>
+
+					<div style="width: 100%">
+						<iframe
+							width="100%"
+							class="location-iframe"
+							frameborder="0"
+							scrolling="no"
+							marginheight="0"
+							marginwidth="0"
+							src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+							><a href="https://www.gps.ie/"
+								>gps trackers</a
+							></iframe
+						>
+					</div>
+				</div>
+			</div>
+			<div class="footer--copyright">
+				<p>Copyright © 2024 LOGO NAME.</p>
+			</div>
+		</footer>
+
+		<!-- SCRIPTS -->
+		<script src="app.js" defer></script>
+		<script type="module" src="dropdownMenu.js" defer></script>
+	</body>
+</html>

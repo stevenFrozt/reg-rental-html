@@ -1,0 +1,163 @@
+:root {
+	--primary: #3ea53c;
+	--gray: #b7b7b7;
+	--light-gray: #e3e3e3;
+	--super-light-gray: rgb(244, 244, 244);
+	--black: #333333;
+	--page-margin: 8rem;
+	--page-margin-sm: 1rem;
+	--border-radius: 5px;
+}
+
+main {
+	display: grid;
+	place-items: center;
+	min-height: calc(100svh - 5rem);
+}
+
+button {
+	width: 100%;
+}
+
+label {
+	font-weight: 500;
+}
+
+input {
+	padding: 0.8rem 0.5rem;
+	border: none;
+	outline: 1px solid var(--gray);
+}
+
+input:focus {
+	outline: 1px solid var(--primary);
+	border: none;
+}
+.container {
+	/* outline: 1px solid red; */
+	padding: 2rem 0;
+	width: 100%;
+}
+.container > * + * {
+	margin-top: 1rem;
+}
+
+.register--form > * + * {
+	margin-top: 0.4rem;
+}
+
+.register--text {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.input--container {
+	display: flex;
+	flex-direction: column;
+}
+.input--container input {
+	margin: 0.3rem 0 1rem 0;
+	border-radius: 3px;
+}
+
+.input--container p {
+	display: none;
+	margin: 0.5rem 0;
+}
+
+.error {
+	outline: 1px solid red;
+}
+
+.error-message {
+	display: block !important;
+	font-size: 0.8rem;
+	color: red;
+}
+
+.terms-container {
+	font-size: 0.9rem;
+	margin-top: 1rem;
+}
+.terms-container a {
+	font-weight: 400;
+}
+
+.terms-container input:focus + .checkmark {
+	outline: 1px solid black;
+}
+.terms-container input {
+	opacity: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.terms-container label {
+	display: flex;
+	gap: 0.5rem;
+	cursor: pointer;
+	font-weight: 400;
+}
+
+/* DEFAULT */
+.terms-container .checkmark {
+	background-color: white;
+	border: 1px solid var(--gray);
+	display: grid;
+	place-items: center;
+	width: fit-content;
+	cursor: pointer;
+	padding: 0px 5px;
+	border-radius: 3px;
+}
+.checkmark i {
+	color: transparent;
+	font-size: 0.8rem;
+	/* opacity: 0; */
+}
+
+/* CHECKED */
+.terms-container input:checked + .checkmark {
+	background-color: var(--primary);
+}
+.terms-container input:checked + .checkmark i {
+	color: white;
+	font-size: 0.8rem;
+	/* opacity: 0; */
+}
+
+.login-btn {
+	background: var(--primary);
+	color: white;
+	margin-top: 2rem;
+}
+
+.login--register-container {
+	font-size: 0.9rem;
+	text-align: center;
+	margin-top: 1.5rem;
+}
+.login--register-container a {
+	color: rgb(26, 152, 248);
+	font-weight: 500;
+}
+
+/* TABLET SIZE */
+@media (min-width: 768px) {
+	.container {
+		width: 100%;
+	}
+
+	.register--text {
+		font-size: 2rem;
+		font-weight: 500;
+	}
+}
+
+/* Laptop SIZE */
+@media (min-width: 1024px) {
+	.container {
+		width: 25%;
+	}
+}

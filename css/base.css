@@ -1,0 +1,99 @@
+:root {
+	--primary: #3ea53c;
+	--gray: #b7b7b7;
+	--light-gray: #e3e3e3;
+	--super-light-gray: rgb(244, 244, 244);
+	--black: #333333;
+	--page-margin: 8rem;
+	--page-margin-sm: 0.3rem;
+	--border-radius: 5px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins";
+	color: var(--black);
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	padding: 0.8rem 3.5rem;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 1.2rem;
+	transition: all 200ms ease;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+body {
+	background-color: white;
+}
+
+main {
+	padding: 0px var(--page-margin-sm);
+	margin-top: 5rem;
+}
+
+nav {
+	background-color: white;
+	height: 4.5rem;
+	width: 100%;
+	padding: 0px var(--page-margin-sm);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: var(--light-gray) 1px solid;
+	position: fixed;
+	top: 0;
+	z-index: 99;
+}
+
+footer {
+	padding: 0px var(--page-margin-sm);
+	min-height: 20rem;
+}
+footer * {
+	color: white !important;
+}
+
+.bg-primary {
+	background-color: var(--primary);
+}
+
+/* Laptop SIZE */
+@media (min-width: 1024px) {
+	nav {
+		padding: 0px var(--page-margin);
+	}
+	main {
+		padding: 0px var(--page-margin);
+	}
+
+	button {
+		border: none;
+		padding: 0.8rem 3.5rem;
+		border-radius: 5px;
+		cursor: pointer;
+		font-weight: 600;
+		font-size: 1.2rem;
+		transition: all 200ms ease;
+	}
+	button:hover {
+		transform: translateY(-2px);
+	}
+	nav {
+		background-color: white;
+		height: 5rem;
+	}
+}
